@@ -8,13 +8,14 @@ import MainContent from './Components/MainContent'
 const App = () => {
   return (
     <Router>
-      <div className='flex h-screen'>
+
+      <div className='flex h-screen z-0'>
         <Sidebar/>
       </div>
-
-      <div className="rounded w-full flex justify-between flex-wrap">
+      <div className="rounded w-full flex justify-between flex-wrap z-10 relative left-60 top-[-37rem]">
         <Routes>
           <Route path='/' element={<MainContent/>}/>
+          
         </Routes>
       </div>
     </Router>
