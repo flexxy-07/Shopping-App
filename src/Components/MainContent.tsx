@@ -105,7 +105,7 @@ const MainContent = () => {
       <div className="mb-5"> 
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="flex justify-start items-start">
-            <button className='border px-4 py-2 rounded-full flex items-center'>
+            <button onClick={() => setDropDownOpen(!dropDownOpen)} className='border px-4 py-2 rounded-full flex items-center'>
               <Tally3 className='mr-2'/>
 
               {filter === 'all'
@@ -169,8 +169,11 @@ const MainContent = () => {
                 <button
                   key={page}
                   onClick={() => handlePageChange(page)}
+                  className={`border px-4 py-2 mx-1 rounded-full ${
+                    page === currentPage ? "bg-black text-white" : ""
+                    } hover: cursor-pointer` }
                 >
-
+                  {page}
                 </button>
               ))}
             </div>
